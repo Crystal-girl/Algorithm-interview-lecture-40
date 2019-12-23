@@ -1,2 +1,2 @@
 # Algorithm-interview-lecture-40
-## python 实现代码
+## 算法面试通关40讲
