@@ -3,7 +3,7 @@ leetcode 20
 Valid Parentheses
 """
 
-def isValid(self, s):
+def is_valid(self, s):
     stack = []
     paren_map = {')': '(', ']': '[', '}': '{'}
     for c in s:
