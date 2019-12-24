@@ -3,7 +3,7 @@ leetcode 24
 Swap Nodes in Pairs
 """
 
-def swapPairs(self, head):
+def swap_pairs(self, head):
     pre, pre.next = self, head
     while pre.next and pre.next.next:
         a = pre.next
