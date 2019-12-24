@@ -2,7 +2,6 @@
 reverse List
 """
 
-
 def reverseList(self, head):
     cur, prev = head, None
     while cur:
