@@ -43,7 +43,6 @@ class IndexMaxHeap:
 
             self.reverse[self.indexes[i // 2]] = i // 2
             self.reverse[self.indexes[i]] = i
-
             i //= 2
 
     def __shift_down(self, i):
