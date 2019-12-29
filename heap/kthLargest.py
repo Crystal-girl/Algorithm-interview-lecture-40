@@ -4,15 +4,16 @@ Kth Largest Element in a Stream
 """
 
 import heapq
+from typing import List
 
-def __init__(self, k, nums):
+def __init__(self, k: int, nums: List[int]):
     self.heap = nums
     self.k = k
     heapq.heapify(self.heap)
     while len(self.heap) > k:
         heapq.heappop(self.heap)
 
-def add(self, val):
+def add(self, val: int) -> int:
     if len(self.heap) < self.k:
         heapq.heappush(self.heap, val)
     elif val > self.heap[0]:
