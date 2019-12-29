@@ -2,11 +2,12 @@
 leetcode 239
 Sliding Window Maximum
 """
+from typing import List
 
 """
 Time Complexity: O(N*1)
 """
-def max_sliding_window(self, nums, k):
+def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
     if not nums:
         return []
     window, res = [], []
