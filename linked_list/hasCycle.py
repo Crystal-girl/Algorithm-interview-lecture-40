@@ -4,7 +4,7 @@ linked list has Cycle
 """
 
 class ListNode:
-    def __int__(self, x):
+    def __init__(self, x):
         self.val = x
         self.next = None
 
