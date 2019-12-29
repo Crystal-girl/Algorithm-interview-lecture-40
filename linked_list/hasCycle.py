@@ -3,7 +3,12 @@ leetcode 141
 linked list has Cycle
 """
 
-def has_cycle(self, head):
+class ListNode:
+    def __int__(self, x):
+        self.val = x
+        self.next = None
+
+def hasCycle(self, head: ListNode) -> bool:
     fast = slow = head
     while fast and slow and fast.next:
         slow = slow.next
