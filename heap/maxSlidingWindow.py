@@ -13,17 +13,17 @@ Notes:
 """
 
 class IndexMaxHeap:
-    def __init__(self, capacity):
+    def __init__(self, capacity: int):
         self.data = [None for _ in range(capacity)]
         self.indexes = [-1 for _ in range(capacity)]
         self.reverse = [-1 for _ in range(capacity)]
         self.count = 0
         self.capacity = capacity
 
-    def size(self):
+    def size(self) -> int:
         return self.count
 
-    def empty(self):
+    def empty(self) -> bool:
         return not self.count
 
     def insert(self, i, item):
@@ -59,7 +59,7 @@ class IndexMaxHeap:
 
             i = idx
 
-    def pop(self):
+    def pop(self) -> int:
         if self.count == 0:
             raise Exception('heap is null')
         ret = self.data[self.indexes[0]]
@@ -73,7 +73,7 @@ class IndexMaxHeap:
         self.__shift_down(1)
         return ret
 
-    def pop_index(self):
+    def pop_index(self) -> int:
         assert self.count > 0
         ret = self.indexes[0]
         self.indexes[0], self.indexes[self.count - 1] = self.indexes[self.count - 1], self.indexes[0]
@@ -81,12 +81,12 @@ class IndexMaxHeap:
         self.__shift_down(0)
         return ret
 
-    def peek(self):
+    def peek(self) -> int:
         if self.count == 0:
             raise Exception('heap is null')
         return self.data[self.indexes[0]]
 
-    def get_item(self, i):
+    def get_item(self, i) -> int:
         return self.data[i]
 
     def update(self, i, item):
@@ -96,11 +96,10 @@ class IndexMaxHeap:
         self.__shift_down(idx)
         self.__shift_up(idx)
 
-    def peek_index(self):
+    def peek_index(self) -> int:
         if self.count == 0:
             raise Exception('heap is null')
         return self.indexes[0]
-
 
 def max_sliding_window(nums, k):
     if not nums:
@@ -121,7 +120,7 @@ def max_sliding_window(nums, k):
 """
 test sample
 """
-if __name__=='__main__':
+if __name__ == '__main__':
     nums = [1, 3, -1, -3, 5, 3, 6, 7]
     k = 3
     res = max_sliding_window(nums, k)
