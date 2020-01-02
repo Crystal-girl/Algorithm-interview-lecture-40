@@ -26,6 +26,7 @@ def threeSum(self, nums: List[int]) -> List[List[int]]:
 better solution
 T: O(N^2)
 S: O(N)
+Note: solution premise is the array elements can be change the order.
 """
 def threeSum(self, nums: List[int]) -> List[List[int]]:
     if not nums or len(nums) < 3:
