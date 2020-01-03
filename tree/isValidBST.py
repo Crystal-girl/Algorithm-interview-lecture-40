@@ -15,10 +15,10 @@ solution 1
 T: O(N)
 S: O(N)
 """
-def isValidBST(self, root: TreeNode) -> bool:
+def isValidBST(self, root: 'TreeNode') -> bool:
     self.prev = None
 
-    def helper(node: TreeNode) -> bool:
+    def helper(node: 'TreeNode') -> bool:
         if node is None:
             return True
         if not helper(node.left):
