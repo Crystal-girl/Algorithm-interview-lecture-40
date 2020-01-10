@@ -5,6 +5,7 @@ Pow
 
 """
 recursion solution
+T: O(logN)
 """
 def pow(self, x: float, n: int) -> float:
     if not n:
@@ -18,6 +19,7 @@ def pow(self, x: float, n: int) -> float:
 
 """
 non-recursion solution
+T: O(logN)
 """
 def pow(self, x: float, n: int) -> float:
     if n < 0:
