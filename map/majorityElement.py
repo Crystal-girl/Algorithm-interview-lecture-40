@@ -4,7 +4,10 @@ Majority Element
 """
 from typing import List
 
-
+"""
+T: O(N)
+S: O(N)
+"""
 def majorityElement(self, nums: List[int]) -> int:
     dic = {}
     for num in nums:

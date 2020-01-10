@@ -4,7 +4,10 @@ Majority Element
 """
 from typing import List
 
-
+"""
+T: O(NlogN)
+S: O(logN)
+"""
 def majorityElement(self, nums: List[int]) -> int:
     def helper(low, high):
         if low == high:
